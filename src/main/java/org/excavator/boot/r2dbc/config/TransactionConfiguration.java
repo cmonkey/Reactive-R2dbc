@@ -1,4 +1,4 @@
-package org.excavator.boot.r2db.config;
+package org.excavator.boot.r2dbc.config;
 
 import io.r2dbc.spi.ConnectionFactory;
 import org.springframework.context.annotation.Bean;

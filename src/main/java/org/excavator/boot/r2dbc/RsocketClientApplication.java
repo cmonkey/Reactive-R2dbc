@@ -1,4 +1,8 @@
-package org.excavator.boot.r2dbc; 
+package org.excavator.boot.r2dbc;
+
+import lombok.SneakyThrows;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.Bean;
 
 public class RsocketClientApplication{
     
@@ -6,7 +10,7 @@ public class RsocketClientApplication{
     public static void main (String [] args) {
         SpringApplication.run(RsocketClientApplication.class, args);
 
-        Syste.in.read();
+        System.in.read();
     }
 
     @Bean
