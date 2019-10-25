@@ -3,7 +3,7 @@ package org.excavator.boot.r2dbc;
 import lombok.SneakyThrows;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Bean;
-
+import org.springframework.messaging.rsocket.RSocketRequester;
 public class RsocketClientApplication{
     
     @SneakyThrows

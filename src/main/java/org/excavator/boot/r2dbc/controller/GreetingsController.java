@@ -4,6 +4,7 @@ import org.excavator.boot.r2dbc.request.GreetingRequest;
 import org.excavator.boot.r2dbc.response.GreetingResponse;
 import org.springframework.stereotype.Controller;
 import reactor.core.publisher.Flux;
+import org.springframework.messaging.handler.annotation.MessageMapping;
 
 import java.time.Duration;
 
