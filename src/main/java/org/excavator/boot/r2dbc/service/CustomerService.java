@@ -2,20 +2,22 @@ package org.excavator.boot.r2dbc.service;
 
 import lombok.RequiredArgsConstructor;
 import org.excavator.boot.r2dbc.entity.Customer;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.reactive.TransactionalOperator;
 import org.springframework.util.Assert;
 import reactor.core.publisher.Flux;
 
 @RequiredArgsConstructor
 public class CustomerService{
-    private final TranscationalOperator transcationalOperator;
+    private final TransactionalOperator transcationalOperator;
 
-    @Transacational
+    @Transactional
     Flux<Customer> saveAllWithTransactionalAnnoation(String...emails){
         return this.validaCustomersFromEamils(emails);
     }
 
     Flux<Customer> saveAllWithTransactionalOperator(String...emails){
-        return this.transacationalOperator.transactional(this.validaCustomersFromEamils(emails));
+        return this.transcationalOperator.transactional(this.validaCustomersFromEamils(emails));
     }
 
     Flux<Customer> validaCustomersFromEamils(String...emails){
