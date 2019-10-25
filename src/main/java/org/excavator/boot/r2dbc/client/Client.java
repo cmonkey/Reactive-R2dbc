@@ -21,7 +21,7 @@ public class Client{
         this.rSocketRequester.route("intervals")
             .data(new GreetingRequest("World"))
             .retrieveFlux(GreetingResponse.class)
-            .subscribe(im -> logger.info("consuming  = [{}]", im);
+            .subscribe(im -> logger.info("consuming  = [{}]", im.getMessage()));
     }
 }
 
