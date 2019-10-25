@@ -2,11 +2,13 @@ package org.excavator.boot.r2dbc.service;
 
 import lombok.RequiredArgsConstructor;
 import org.excavator.boot.r2dbc.entity.Customer;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.reactive.TransactionalOperator;
 import org.springframework.util.Assert;
 import reactor.core.publisher.Flux;
 
+@Service
 @RequiredArgsConstructor
 public class CustomerService{
     private final TransactionalOperator transcationalOperator;
